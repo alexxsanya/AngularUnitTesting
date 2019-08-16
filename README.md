@@ -1,7 +1,6 @@
-# Pluralsight's Unit Testing in Angular Course
-This course is up to date.
+# Angular Unit Testing
+This course depends on the pluralsight course Unit Testing in Angular by :-
+- Joe Eames : @josepheames or http://joeeames.me
 
-To get started, clone the repo or download it
-
-npm install
-npm test
+## Accomplished
+- Unit Testing using Jasmine & Karma
