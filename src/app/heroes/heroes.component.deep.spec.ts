@@ -48,6 +48,21 @@ describe('HeroesComponents (DeepTest)', () => {
         for(let i = 0; i < HeroComponentDes.length; i ++ ) {
             expect(HeroComponentDes[i].componentInstance.hero).toBe(HEROES[i]) 
         }
+    });
+
+    it(`should call heroService.deleteHero when the Hero Component's 
+        delete button is clicked`, () => {
+        spyOn(fixture.componentInstance, 'delete'); // watch HeroComponent for any event on it.
+        mockHeroService.getHeroes.and.returnValue(of(HEROES));
+
+        fixture.detectChanges();
+
+        const HeroComponentDe = fixture.debugElement.queryAll(By.directive(HeroComponent));
+        HeroComponentDe[0].query(By.css('button')).triggerEventHandler(
+            'click',  { stopPropagation: () => {} }
+        )
+
+        expect(fixture.componentInstance.delete).toHaveBeenCalledWith(HEROES[0]);
     })
 
 })
