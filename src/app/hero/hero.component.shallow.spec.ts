@@ -1,6 +1,6 @@
-import { TestBed, ComponentFixture } from "@angular/core/testing";
-import { HeroComponent } from "./hero.component";
-import { NO_ERRORS_SCHEMA } from "@angular/core";
+import { TestBed, ComponentFixture } from '@angular/core/testing';
+import { HeroComponent } from './hero.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('HeroComponent (shallow tests)', () => {
 
@@ -20,7 +20,7 @@ describe('HeroComponent (shallow tests)', () => {
             id: 1,
             name: 'Superdude',
             strength: 4
-        }
+        };
         expect(fixture.componentInstance.hero.name).toEqual('Superdude');
     });
 
@@ -29,10 +29,10 @@ describe('HeroComponent (shallow tests)', () => {
             id: 1,
             name: 'Superdude',
             strength: 4
-        } 
+        };
         fixture.detectChanges();
-        
-        expect(fixture.nativeElement.querySelector('a').textContent).toContain('Superdude')     
-    })
 
-})
+        expect(fixture.nativeElement.querySelector('a').textContent).toContain('Superdude');
+    });
+
+});
